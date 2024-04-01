@@ -36,9 +36,11 @@ class LoginForm extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Image.network('https://picsum.photos/250?image=9'),
+          const SizedBox(height: 12.0),
           TextFormField(
             decoration: InputDecoration(
-              labelText: "Enter email ",
+              labelText: "Enter email",
               border: const OutlineInputBorder(),
               errorText: !loginForm.email.isInValid ? null : loginForm.email.errorMsg,
             ),
@@ -48,7 +50,7 @@ class LoginForm extends StatelessWidget {
           TextFormField(
             obscureText: true,
             decoration: InputDecoration(
-              labelText: "Enter Password ",
+              labelText: "Enter Password",
               border: const OutlineInputBorder(),
               errorMaxLines: 3,
               errorText: !loginForm.password.isInValid ? null : loginForm.password.errorMsg,
